@@ -96,12 +96,13 @@ for i in range(rank):
                 answer=math.log(number5)
                 print(answer)
             elif select==6:
-                number6=float(input('enter number: '))
-                number7=float(input('enter number: '))
-                print("kmm: " , math.lcm(number6, number7))
+                number6=int(float(input('enter number: ')))
+                number7=int(float(input('enter number: ')))
+                answer= math.lcm(number6, number7)
+                print(answer)
             elif select==7:
-                number8=float(input('enter number: '))
-                number9=float(input('enter number: '))
+                number8=int(float(input('enter number: ')))
+                number9=int(float(input('enter number: ')))
                 print("bmm: " , math.gcd(number8, number9))
             elif select==8:
                 number10 = float(input("please Enter  number: "))
