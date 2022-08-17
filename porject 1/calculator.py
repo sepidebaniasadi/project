@@ -85,26 +85,26 @@ for i in range(rank):
                 number9=float(input('enter number: '))
                 print("bmm: " , math.gcd(number8, number9))
             elif select==8:
-                number10 = int(float(input("please Enter integer number: ")))
+                number10 = float(input("please Enter  number: "))
                 if number10 < 0:
                     print("Sorry, factorial does not exist for negative numbers")
                 else:
                     result = math.factorial(number10)
                     print("The factorial of {} is: {}".format(number10, result))
             elif select==9:
-                 number11 = int(float(input("please Enter  number: ")))
+                 number11 = float(input("please Enter  number: "))
                  answer=math.degrees(number11)
                  print(answer)
             elif select==10:
-                 number12 = int(float(input("please Enter  number: ")))
+                 number12 = float(input("please Enter  number: "))
                  answer=math.radians(number12)
                  print(answer)
             elif select==11:
-                 number13 = int(float(input("please Enter  number: ")))
+                 number13 = float(input("please Enter  number: "))
                  answer=math.ceil(number13)
                  print(answer)
             elif select==12:
-                 number14 = int(float(input("please Enter  number: ")))
+                 number14 = float(input("please Enter  number: "))
                  answer=math.floor(number14)
                  print(answer)
 
