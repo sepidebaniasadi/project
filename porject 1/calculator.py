@@ -40,14 +40,14 @@ for i in range(rank):
             answer=number1%number2
             print(answer)
      elif basic_or_advanced==2:
-            print("please select :"'\n''_____________''\n''1)abs''\n''2)Trighanbes''\n''3)sqrt''\n''4)even or odd''\n''5)log''\n''6)kmm''\n''7)bmm''\n''8)factorial''\n''9)Convert radians to degrees''\n''10)convert degrees to radians''\n''11)ceil''\n''12)floor')
+            print("please select :"'\n''_____________''\n''1)abs''\n''2)Trighanbes''\n''3)sqrt''\n''4)even or odd''\n''5)log''\n''6)kmm''\n''7)bmm''\n''8)factorial''\n''9)Convert radians to degrees''\n''10)convert degrees to radians''\n''11)ceil''\n''12)floor''\n''13)exp''\n''14)log(x,b)''\n''15)int(x)''\n''16)hypot(x,y)''\n''17)power(x,y)')
             select=int(float(input("select: ")))
             if select==1:
                 number=float(input("enter your number: "))
                 answer=abs(number)
                 print(answer)
             elif select==2:
-                print('________________'"please select: "'\n''1)sin''\n''2)cos''\n''3)tan''\n''4)cot')
+                print('________________'"please select: "'\n''1)sin''\n''2)cos''\n''3)tan''\n''4)cot''\n''5)arsin''\n''6)arcos''\n''7)artan''\n''8)arctan''\n''9)arsinh''\n''10arcosh')
                 select2=int(float(input("select= ")))
                 number2=float(input("enter your number: "))
                 if select2==1:
@@ -62,6 +62,25 @@ for i in range(rank):
                 elif select==4:
                     answer=math.cot(number2)
                     print(answer)
+                elif select==5:
+                    answer=math.asin(number2)
+                    print(answer)
+                elif select==6:
+                    answer=math.acos(number2)
+                    print(answer)
+                elif select==7:
+                    answer=math.atan(number2)
+                    print(answer)
+                elif select==8:
+                    answer=math.acot(number2)
+                    print(answer)
+                elif select==9:
+                    answer=math.asinh(number2)
+                    print(answer)
+                elif select==10:
+                    answer=math.acosh(number2)
+                    print(answer)
+                
             elif select==3:
                 number3=float(input("enter your number: "))
                 answer=math.sqrt(number3)
@@ -106,6 +125,29 @@ for i in range(rank):
             elif select==12:
                  number14 = float(input("please Enter  number: "))
                  answer=math.floor(number14)
+                 print(answer)
+            elif select==13:
+                 number15=float(input("please Enter  number: "))
+                 answer=math.exp(number15)
+                 print(answer)
+            elif select==14:
+                 x=float(input("please Enter  x: "))
+                 b=float(input("please Enter  b: "))
+                 answer=math.log(x,b)
+                 print(answer)
+            elif select==15:
+                 number17=float(input("please Enter  your numbers: "))
+                 answer=math.trunc(number17)
+                 print(answer)
+            elif select==16:
+                 number18=float(input("please Enter  number: "))
+                 number19=float(input("please Enter  number: "))
+                 answer=math.hypot(number18,number19)
+                 print(answer)
+            elif select==17:
+                 x=float(input("please Enter  x: "))
+                 y=float(input("please Enter  y : "))
+                 answer=math.pow(x,y)
                  print(answer)
      else:
         print ("wrong we dont have this number")
