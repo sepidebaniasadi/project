@@ -63,7 +63,7 @@ for i in range(rank):
                     print(answer)
             elif select==3:
                 number3=float(input("enter your number: "))
-                answer=math.sqrt(number2)
+                answer=math.sqrt(number3)
                 print(answer)
             elif select==4:
                 number4=float(input("enter number"))
