@@ -40,14 +40,14 @@ for i in range(rank):
             answer=number1%number2
             print(answer)
      if basic_or_advanced==2:
-            print("please select :"'\n''_____________''\n''1)abs''\n''2)Trighanbes''\n''3)sqrt''\n''4)even or odd''\n''5)log''\n''6)kmm''\n''7)bmm''\n''8)factorial')
+            print("please select :"'\n''_____________''\n''1)abs''\n''2)Trighanbes''\n''3)sqrt''\n''4)even or odd''\n''5)log''\n''6)kmm''\n''7)bmm''\n''8)factorial''\n''9)Convert radians to degrees''\n''10)convert degrees to radians''\n''11)ceil''\n''12)floor')
             select=int(float(input("select: ")))
             if select==1:
                 number=float(input("enter your number: "))
                 answer=abs(number)
                 print(answer)
             elif select==2:
-                print('________________'"please select: "'\n''1)sin''\n''2)cos''\n''3)tan''\n''4)cot''\n''6)kmm''\n''6)bmm''\n''7)factorial')
+                print('________________'"please select: "'\n''1)sin''\n''2)cos''\n''3)tan''\n''4)cot')
                 select2=int(float(input("select= ")))
                 number2=float(input("enter your number: "))
                 if select2==1:
@@ -91,6 +91,23 @@ for i in range(rank):
                 else:
                     result = math.factorial(number10)
                     print("The factorial of {} is: {}".format(number10, result))
+            elif select==9:
+                 number11 = int(float(input("please Enter  number: ")))
+                 answer=math.degrees(number11)
+                 print(answer)
+            elif select==10:
+                 number12 = int(float(input("please Enter  number: ")))
+                 answer=math.radians(number12)
+                 print(answer)
+            elif select==11:
+                 number13 = int(float(input("please Enter  number: ")))
+                 answer=math.ceil(number13)
+                 print(answer)
+            elif select==12:
+                 number14 = int(float(input("please Enter  number: ")))
+                 answer=math.floor(number14)
+                 print(answer)
+
      else:
         print ("wrong we dont have this number")
         break
