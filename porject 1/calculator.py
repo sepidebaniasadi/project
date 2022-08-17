@@ -39,7 +39,7 @@ for i in range(rank):
         elif Operation=="%" or Operation== "mod":
             answer=number1%number2
             print(answer)
-     if basic_or_advanced==2:
+     elif basic_or_advanced==2:
             print("please select :"'\n''_____________''\n''1)abs''\n''2)Trighanbes''\n''3)sqrt''\n''4)even or odd''\n''5)log''\n''6)kmm''\n''7)bmm''\n''8)factorial''\n''9)Convert radians to degrees''\n''10)convert degrees to radians''\n''11)ceil''\n''12)floor')
             select=int(float(input("select: ")))
             if select==1:
@@ -107,7 +107,6 @@ for i in range(rank):
                  number14 = float(input("please Enter  number: "))
                  answer=math.floor(number14)
                  print(answer)
-
      else:
         print ("wrong we dont have this number")
         break
