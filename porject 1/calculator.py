@@ -8,10 +8,10 @@ for i in range(rank):
      print(" ________________""\n""|""1)basic",space2,"|\n""|",space,"|\n""|",space,"|\n""|",space,"|\n""|""2)advanced",space3,"|\n""|""________________""|")
      basic_or_advanced=int(input("answer: "))
      if basic_or_advanced==1:
-        print("you are select basic you can yose oration"'\n''(+ or sum)''\n''(- or subtraction)''\n''(* or zarb)''\n''(** or power)''\n''(/ or split)''\n''(/ or split int)''\n''(%  mod)') 
+        print("you are select basic you can yose oration"'\n''(+ or sum)''\n''(- or subtraction)''\n''(* or zarb)''\n''(** or power)''\n''(// or split)''\n''(/ or split int)''\n''(%  mod)') 
         number1=float(input("Enter the number on the left side of the operation "))
         Operation=input("enter your a opration: ")
-        number2=float(input("Enter the number on the left side of the operation "))
+        number2=float(input("Enter the number on the right side of the operation "))
         if Operation=="+" or Operation=="sum":
             answer=(number1+number2)
             print(answer)
