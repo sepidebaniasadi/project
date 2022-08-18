@@ -8,37 +8,78 @@ for i in range(rank):
      print(" ________________""\n""|""1)basic",space2,"|\n""|",space,"|\n""|",space,"|\n""|",space,"|\n""|""2)advanced",space3,"|\n""|""________________""|")
      basic_or_advanced=int(input("answer: "))
      if basic_or_advanced==1:
-        print("you are select basic you can yose oration"'\n''(+ or sum)''\n''(- or subtraction)''\n''(* or zarb)''\n''(** or power)''\n''(// or split)''\n''(/ or split int)''\n''(%  mod)') 
-        number1=float(input("Enter the number on the left side of the operation "))
-        Operation=input("enter your a opration: ")
-        number2=float(input("Enter the number on the right side of the operation "))
-        if Operation=="+" or Operation=="sum":
-            answer=(number1+number2)
-            print(answer)
-        elif Operation=="-"or Operation=="subtraction":
-            answer=(number1-number2)
-            print(answer)
-        elif Operation=="*" or Operation== "zarb":
-            answer=number1*number2
-            print(answer)
-        elif Operation=="/" or Operation== "split":
-            if number2==0:
-                print("wrong")
-            else:
-                answer=number1/number2
+        print("1)basic"'\n'"2)basic sequence")
+        select_basic=int(input("select:"))
+        if select_basic==1:
+            print("you are select basic you can yose oration"'\n''(+ or sum)''\n''(- or subtraction)''\n''(* or zarb)''\n''(** or power)''\n''(/ or split)''\n''(// or split int)''\n''(%  mod)') 
+            number1=float(input("Enter the number on the left side of the operation "))
+            Operation=input("enter your a opration: ")
+            number2=float(input("Enter the number on the right side of the operation "))
+            if Operation=="+" or Operation=="sum":
+                answer=(number1+number2)
                 print(answer)
-        elif Operation=="//" or Operation== "split int":
-            if number2==0:
-                print("wrong")
-            else :
-                answer=number1//number2
+            elif Operation=="-"or Operation=="subtraction":
+                answer=(number1-number2)
                 print(answer)
-        elif Operation=="**" or Operation==  " power":
-            answer=number1**number2
-            print(answer)
-        elif Operation=="%" or Operation== "mod":
-            answer=number1%number2
-            print(answer)
+            elif Operation=="*" or Operation== "zarb":
+                answer=number1*number2
+                print(answer)
+            elif Operation=="/" or Operation== "split":
+                if number2==0:
+                    print("wrong")
+                else:
+                    answer=number1/number2
+                    print(answer)
+            elif Operation=="//" or Operation== "split int":
+                if number2==0:
+                    print("wrong")
+                else :
+                    answer=number1//number2
+                    print(answer)
+            elif Operation=="**" or Operation==  " power":
+                answer=number1**number2
+                print(answer)
+            elif Operation=="%" or Operation== "mod":
+                answer=number1%number2
+                print(answer)
+        elif select_basic==2:
+            while True:
+                number = float(input("Enter a number: "))
+                break
+            while True:
+                action = input("Enter the action (Enter 'DONE' to finish): ")
+                if action.upper() == "DONE":
+                    print("Resault: ",ANSWER)
+                    break
+                elif action == "-":
+                    pass
+                elif action == "*":
+                    pass
+                elif action == "/":
+                    pass
+                elif action == "+":
+                    pass
+                else:
+                    print("** Your action isn't avalable **")
+                    continue
+                number2 = float(input("Enter a number: "))
+                if action == "+":
+                    ANSWER=number + number2
+                elif action == "-":
+                    ANSWER=number - number2
+                elif action == "*":
+                    ANSWER=number * number2
+                elif action == "/":
+                    if number % number2 != 0:
+                        q = input("Do you like to round it? [yes/no] ")
+                    if q.lower() == "yes":
+                        ANSWER=number / number2
+                        number = float(round(number))   
+                    else:
+                        ANSWER=number / number2
+                    
+                    continue
+            
      elif basic_or_advanced==2:
             print("please select :"'\n''_____________''\n''1)abs''\n''2)Trighanbes''\n''3)sqrt''\n''4)even or odd''\n''5)log10''\n''6)kmm''\n''7)bmm''\n''8)factorial''\n''9)Convert radians to degrees''\n''10)convert degrees to radians''\n''11)ceil''\n''12)floor''\n''13)exp''\n''14)log(x,b)''\n''15)int(x)''\n''16)hypot(x,y)''\n''17)power(x,y)')
             select=int(float(input("select: ")))
