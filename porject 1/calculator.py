@@ -49,7 +49,7 @@ for i in range(rank):
             while True:
                 action = input("Enter the action (Enter 'DONE' to finish): ")
                 if action.upper() == "DONE":
-                    print("Resault: ",ANSWER)
+                    print("Resault: {}".format(number) , end="\n\n")
                     break
                 elif action == "-":
                     pass
@@ -64,19 +64,19 @@ for i in range(rank):
                     continue
                 number2 = float(input("Enter a number: "))
                 if action == "+":
-                    ANSWER=number + number2
+                    number += number2
                 elif action == "-":
-                    ANSWER=number - number2
+                    number -= number2
                 elif action == "*":
-                    ANSWER=number * number2
+                    number *= number2
                 elif action == "/":
                     if number % number2 != 0:
                         q = input("Do you like to round it? [yes/no] ")
                     if q.lower() == "yes":
-                        ANSWER=number / number2
+                        number /= number2
                         number = float(round(number))   
                     else:
-                        ANSWER=number / number2
+                        number /= number2
                     
                     continue
             
