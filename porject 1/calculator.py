@@ -47,7 +47,7 @@ for i in range(rank):
                 answer=abs(number)
                 print(answer)
             elif select==2:
-                print('________________'"please select: "'\n''1)sin''\n''2)cos''\n''3)tan''\n''4)arsin''\n''5)arcos''\n''6)artan''\n''\n''7)arsinh''\n''8)arcosh')
+                print('________________'"please select: "'\n''1)sin''\n''2)cos''\n''3)tan''\n''4)arsin''\n''5)arcos''\n''6)artan''\n''7)arsinh''\n''8)arcosh')
                 select2=int(float(input("select= ")))
                 number2=float(input("enter your number: "))
                 if select2==1:
