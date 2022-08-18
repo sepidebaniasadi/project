@@ -8,10 +8,10 @@ for i in range(rank):
      print(" ________________""\n""|""1)basic",space2,"|\n""|",space,"|\n""|",space,"|\n""|",space,"|\n""|""2)advanced",space3,"|\n""|""________________""|")
      basic_or_advanced=int(input("answer: "))
      if basic_or_advanced==1:
-        print("you are select basic you can yose oration"'\n''(+ or sum)''\n''(- or subtraction)''\n''(* or zarb)''\n''(** or power)''\n''(/ or split)''\n''(// or split int)''\n''(%  mod)') 
+        print("you are select basic you can yose oration"'\n''(+ or sum)''\n''(- or subtraction)''\n''(* or zarb)''\n''(** or power)''\n''(/ or split)''\n''(/ or split int)''\n''(%  mod)') 
         number1=float(input("Enter the number on the left side of the operation "))
         Operation=input("enter your a opration: ")
-        number2=float(input("Enter the number on the right side of the operation "))
+        number2=float(input("Enter the number on the left side of the operation "))
         if Operation=="+" or Operation=="sum":
             answer=(number1+number2)
             print(answer)
@@ -47,7 +47,7 @@ for i in range(rank):
                 answer=abs(number)
                 print(answer)
             elif select==2:
-                print('________________'"please select: "'\n''1)sin''\n''2)cos''\n''3)tan''\n''4)cot''\n''5)arsin''\n''6)arcos''\n''7)artan''\n''8)arctan''\n''9)arsinh''\n''10arcosh')
+                print('________________'"please select: "'\n''1)sin''\n''2)cos''\n''3)tan''\n''4)arsin''\n''5)arcos''\n''6)artan''\n''\n''7)arsinh''\n''8)arcosh')
                 select2=int(float(input("select= ")))
                 number2=float(input("enter your number: "))
                 if select2==1:
@@ -59,25 +59,19 @@ for i in range(rank):
                 elif select2==3:
                     answer=math.tan(number2)
                     print(answer)
-                elif select==4:
-                    answer=math.cot(number2)
-                    print(answer)
-                elif select==5:
+                elif select2==4:
                     answer=math.asin(number2)
                     print(answer)
-                elif select==6:
+                elif select2==5:
                     answer=math.acos(number2)
                     print(answer)
-                elif select==7:
+                elif select2==6:
                     answer=math.atan(number2)
                     print(answer)
-                elif select==8:
-                    answer=math.acot(number2)
-                    print(answer)
-                elif select==9:
+                elif select2==7:
                     answer=math.asinh(number2)
                     print(answer)
-                elif select==10:
+                elif select2==8:
                     answer=math.acosh(number2)
                     print(answer)
                 
