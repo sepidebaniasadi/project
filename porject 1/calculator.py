@@ -40,7 +40,7 @@ for i in range(rank):
             answer=number1%number2
             print(answer)
      elif basic_or_advanced==2:
-            print("please select :"'\n''_____________''\n''1)abs''\n''2)Trighanbes''\n''3)sqrt''\n''4)even or odd''\n''5)log''\n''6)kmm''\n''7)bmm''\n''8)factorial''\n''9)Convert radians to degrees''\n''10)convert degrees to radians''\n''11)ceil''\n''12)floor''\n''13)exp''\n''14)log(x,b)''\n''15)int(x)''\n''16)hypot(x,y)''\n''17)power(x,y)')
+            print("please select :"'\n''_____________''\n''1)abs''\n''2)Trighanbes''\n''3)sqrt''\n''4)even or odd''\n''5)log10''\n''6)kmm''\n''7)bmm''\n''8)factorial''\n''9)Convert radians to degrees''\n''10)convert degrees to radians''\n''11)ceil''\n''12)floor''\n''13)exp''\n''14)log(x,b)''\n''15)int(x)''\n''16)hypot(x,y)''\n''17)power(x,y)')
             select=int(float(input("select: ")))
             if select==1:
                 number=float(input("enter your number: "))
@@ -87,7 +87,7 @@ for i in range(rank):
                     print("your number is odd")
             elif select==5:
                 number5=float(input("enter number"))
-                answer=math.log(number5)
+                answer=math.log10(number5)
                 print(answer)
             elif select==6:
                 number6=int(float(input('enter number: ')))
