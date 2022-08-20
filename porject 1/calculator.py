@@ -186,27 +186,127 @@ for i in range(rank):
                  answer=math.pow(x,y)
                  print(answer)
             elif select==18:
-                print('='*10,'convert','='*10,'\n''1)bin''\n''2)hex''\n''3)oct')
+                print('='*10,'convert','='*10,'\n''selec: ''\n''1)bin--->dec''\n''2)bin--->oct''\n''3)bin--->hex''\n''4)oct--->dec''\n''5)oct--->bin''\n''6)oct--->hex''\n''7)hex--->dec''\n''8)hex--->bin''\n''9)hex--->oct')
                 select=int(input('select:'))
                 if select==1:
-                    num=int(input("enter num"))
-                    if num<2:
-                        print("wrong please enter number bigger than 2")
-                    elif num>2:
-                        print ('your conver is: ',bin(num))
+                    number=0
+                    bace=1
+                    last=0
+                    sums=0
+                    number = int(input("Enter number: "))
+                    while True:
+                        last = int(number%10)
+                        number = int(number/10)
+                        last *= bace
+                        sums += last
+                        bace = bace*2
+                        print("dec= ",sums)
+                        break
                 elif select==2:
-                    num=int(input("enter num"))
-                    if num<16:
-                        print("wrong please enter number bigger than 16")
-                    elif num>16:
-                        print ('your conver is: ',hex(num))
+                    number=0
+                    bace=1
+                    last=0
+                    sums=0
+                    number = int(input("Enter number: "))
+                    while number:
+                        last = int(number%10)
+                        number = int(number/10)
+                        last *= bace
+                        sums += last
+                        bace = bace*2
+                    print(oct(sums))
                 elif select==3:
-                    num=int(input("enter num"))
-                    if num<8:
-                        print("wrong please enter number bigger than 8")
-                    elif num>8:
-                        print ('your conver is: ',oct(num))
-                else:
+                    number=0
+                    bace=1
+                    last=0
+                    sums=0
+                    number = int(input("Enter number: "))
+                    while number:
+                        last = int(number%10)
+                        number = int(number/10)
+                        last *= bace
+                        sums += last
+                        bace = bace*2
+                    print(hex(sums))
+                elif select==4:
+                    number=0
+                    bace=1
+                    last=0
+                    sums=0
+                    number = int(input("Enter number: "))
+                    while number:
+                        last = int(number%10)
+                        number = int(number/10)
+                        last *= bace
+                        sums += last
+                        bace = bace*8
+                    print(sums)
+                elif select==5:
+                    number=0
+                    bace=1
+                    last=0
+                    sums=0
+                    number = int(input("Enter number: "))
+                    while number:
+                        last = int(number%10)
+                        number = int(number/10)
+                        last *= bace
+                        sums += last
+                        bace = bace*8
+                    print(bin(sums))
+                elif select==6:
+                    number=0
+                    bace=1
+                    last=0
+                    sums=0
+                    number = int(input("Enter number: "))
+                    while number:
+                        last = int(number%10)
+                        number = int(number/10)
+                        last *= bace
+                        sums += last
+                        bace = bace*8
+                    print(hex(sums))
+                elif select==7:
+                    number=0
+                    bace=1
+                    last=0
+                    sums=0
+                    number = int(input("Enter number: "))
+                    while number:
+                        last = int(number%10)
+                        number = int(number/10)
+                        last *= bace
+                        sums += last
+                        bace = bace*16
+                    print(sums)
+                elif select==8:
+                    number=0
+                    bace=1
+                    last=0
+                    sums=0
+                    number = int(input("Enter number: "))
+                    while number:
+                        last = int(number%10)
+                        number = int(number/10)
+                        last *= bace
+                        sums += last
+                        bace = bace*16
+                    print(bin(sums))
+                elif select==9:
+                    number=0
+                    bace=1
+                    last=0
+                    sums=0
+                    number = int(input("Enter number: "))
+                    while number:
+                        last = int(number%10)
+                        number = int(number/10)
+                        last *= bace
+                        sums += last
+                        bace = bace*16
+                    print(oct(sums))
+            else:
                     print('we dont have your select ')
                     break
      else:
