@@ -186,7 +186,7 @@ for i in range(rank):
                  answer=math.pow(x,y)
                  print(answer)
             elif select==18:
-                print('='*10,'convert','='*10,'\n''selec: ''\n''1)bin--->dec''\n''2)bin--->oct''\n''3)bin--->hex''\n''4)oct--->dec''\n''5)oct--->bin''\n''6)oct--->hex''\n''7)hex--->dec''\n''8)hex--->bin''\n''9)hex--->oct')
+                print('='*10,'convert','='*10,'\n''selec: ''\n''1)bin--->dec''\n''2)bin--->oct''\n''3)bin--->hex''\n''4)oct--->dec''\n''5)oct--->bin''\n''6)oct--->hex''\n''7)hex--->dec''\n''8)hex--->bin''\n''9)hex--->oct''\n''10)dec--->bin''\n''11)dec--->oct''\n''12)dec--->hex')
                 select=int(input('select:'))
                 if select==1:
                     number=0
@@ -306,6 +306,15 @@ for i in range(rank):
                         sums += last
                         bace = bace*16
                     print(oct(sums))
+                elif select==10:
+                    number = int(input("Enter number: "))
+                    print(bin(number))
+                elif select==11:
+                    number = int(input("Enter number: "))
+                    print(oct(number))
+                elif select==12:
+                    number = int(input("Enter number: "))
+                    print(hex(number))
             else:
                     print('we dont have your select ')
                     break
