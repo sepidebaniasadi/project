@@ -194,14 +194,14 @@ for i in range(rank):
                     last=0
                     sums=0
                     number = int(input("Enter number: "))
-                    while True:
+                    while number:
                         last = int(number%10)
                         number = int(number/10)
                         last *= bace
                         sums += last
                         bace = bace*2
-                        print("dec= ",sums)
-                        break
+                    print('dec',(sums))
+                        
                 elif select==2:
                     number=0
                     bace=1
