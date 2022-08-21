@@ -81,7 +81,7 @@ for i in range(rank):
                     continue
             
      elif basic_or_advanced==2:
-            print('='*10,'selection','='*10,'\n''1)abs''\n''2)Trighanbes''\n''3)sqrt''\n''4)even or odd''\n''5)log10''\n''6)kmm''\n''7)bmm''\n''8)factorial''\n''9)Convert radians to degrees''\n''10)convert degrees to radians''\n''11)ceil''\n''12)floor''\n''13)exp''\n''14)log(x,b)''\n''15)int(x)''\n''16)hypot(x,y)''\n''17)power(x,y)''\n''18)convert number')
+            print('='*10,'selection','='*10,'\n''1)abs''\n''2)Trighanbes''\n''3)sqrt''\n''4)even or odd''\n''5)log10''\n''6)kmm''\n''7)bmm''\n''8)factorial''\n''9)Convert radians to degrees''\n''10)convert degrees to radians''\n''11)ceil''\n''12)floor''\n''13)exp''\n''14)log(x,b)''\n''15)int(x)''\n''16)hypot(x,y)''\n''17)power(x,y)''\n''18)convert number''\n''19)convert temprature''\n''20)BMI''\n''21)area')
             select=int(float(input("select: ")))
             if select==1:
                 number=float(input("enter your number: "))
@@ -315,9 +315,90 @@ for i in range(rank):
                 elif select==12:
                     number = int(input("Enter number: "))
                     print(hex(number))
+            elif select==19:
+                    temperture=int(float(input("enter temprrture: ")))
+                    space="                "
+                    space1="       "
+                    print("Please select one of the conversions below for the entered temperature""\n"" __________________""\n""|",space,"|""\n""|""1)c---->f",space1,"|""\n""|",space,"|""\n""|""2)f---->c",space1,"|""\n""|",space,"|""\n""|""3)k---->f",space1,"|""\n""|",space,"|""\n""|""4)f---->k",space1,"|""\n""|",space,"|""\n""|""5)c---->k",space1,"|""\n""|",space,"|""\n""|""6)k---->c",space1,"|","\n""|""__________________""|")
+                    choose=int(float(input("Which one do you choose? ")))
+                    if choose==1:
+                        farenheit=temperture(9/5)+32
+                        print("your tempercher with conversion is: ",farenheit,"farenheit")
+                    elif choose==2:
+                        celsius=(temperture-32)*(5/9)
+                        print("your tempercher with conversion is: ",celsius,"celsius")
+                    elif choose==3:
+                        farenheit=(temperture-273.15)*(5/9)+32
+                        print("your tempercher with conversion is: ",farenheit,"farenheit")
+                    elif choose==4:
+                        kelvin=(temperture-32)*(5/9)+273.15
+                        print("your tempercher with conversion is: ",kelvin,"kelvin")
+                    elif choose==5:
+                        kelvin=(temperture+273.15)
+                        print("your tempercher with conversion is: ",kelvin,"kelvin")
+                    elif choose==6:
+                        celsius=(temperture-273.15)
+                        print("your tempercher with conversion is: ",celsius,"celsius")
+                    else:
+                        print('we dont have your select ')
+                        break
+            elif select==20:    
+                length=(float(input("enter your length with metr: ")))
+                wieght=(float(input('enter your wieght with kg: ')))
+                BMI=(wieght/(length**2))
+                if BMI>=16 and BMI<18.5:
+                    print(" your BMI is: ", BMI,'/n'"body wiegth deficit")
+                elif BMI>=18.5 and BMI<24:
+                    print(" your BMI is: ", BMI,'/n'"normal")
+                elif BMI>=24 and BMI<30:
+                    print(" your BMI is: ", BMI,'/n'"wieght over")  
+                elif BMI>=30 and BMI<35:
+                    print(" your BMI is: ", BMI,'/n'"obesity first degree")     
+                elif BMI>=35 and BMI<40:
+                    print(" your BMI is: ", BMI,'/n'"obesity second degree")  
+                elif BMI>=40:
+                    print(" your BMI is: ", BMI,'/n'"obesity third degree")
+                else:
+                    print("This interval was unpredictable.")
+            elif select==21:
+                print("="*10,'area selection','='*10,'\n''1)Triangle''\n''2)circle''3)Square''\n''4)Rectangle''\n''5)Cylinder')
+                select=int(input('select: '))
+                if select==1:
+                    base=float(input("enter base: "))
+                    hieght=float(input('enter hieght:'))
+                    area=(base*hieght)/2
+                    print('area ia = ',area)
+                elif select==2:
+                    pi=3.14
+                    round=float(input("enter round: "))
+                    area=pi*(round**2)
+                    print('area ia = ',area)
+                elif select==3:
+                     side=float(input('enter side; '))
+                     area=side**2
+                     print('area ia = ',area)
+                elif select==4:
+                    Lengt=float(input('enter length: '))
+                    width= float(input('enter width: '))
+                    area=width*Lengt
+                    print('area ia = ',area)
+                elif select==5:
+                    print("="*10,'selection','='*10,'\n''1)side area''2)total area')
+                    selectc=int(input('select = '))
+                    if selectc==1:
+                        height=int(input("enter hieght: "))
+                        Radius=int(input("enter radius: "))
+                        pi=3.14
+                        side_area=2*pi*Radius*height
+                        print("side area is: ",side_area)
+                    elif selectc==2:
+                        height=int(input("enter hieght: "))
+                        Radius=int(input("enter radius: "))
+                        pi=3.14
+                        total_area=(2*pi*Radius*height)+(2*pi*Radius*Radius)
+                        print(" total area is : ",total_area)
+                else:
+                    print('wrong!')
             else:
-                    print('we dont have your select ')
-                    break
-     else:
-        print ("wrong we dont have this number")
-        break
+                print ("wrong we dont have this number")
+                break
