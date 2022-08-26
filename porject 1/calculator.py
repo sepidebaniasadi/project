@@ -1,21 +1,38 @@
 import math
-space="              "
-space2="       "
-space3="    "
-print("="*10,'welcome',"="*10)
+from tabulate import tabulate
+
+table_p=['welcome']
+print(tabulate(table_p,tablefmt='fancy_grid'))
+
+
 rank=int(float(input('\n'"How many times do you want to use calculator?")))
 i=0
 for i in range(rank):
      i+=1
-     
+    
      print('\n','='*40,'\n'"would you like use to basic part or advanced? ")
-     print(" ________________""\n""|""1)basic",space2,"|\n""|",space,"|\n""|",space,"|\n""|",space,"|\n""|""2)advanced",space3,"|\n""|""________________""|")
+
+     table_a=[["1)basic"],
+             ['2)advanced']]
+     print(tabulate(table_a,headers='firstrow',tablefmt='fancy_grid'))
+
      basic_or_advanced=int(input("answer: "))
+     
      if basic_or_advanced==1:
-        print('='*10,'selection','='*10,'\n'"1)basic"'\n'"2)basic sequence(No priority)")
+        table_b=[["1)basic"],
+                 ["2)basic sequence(No priority)"]]
+        print(tabulate(table_b,headers='firstrow',tablefmt='fancy_grid'))
         select_basic=int(input("select:"))
         if select_basic==1:
-            print("you are select basic you can use opration"'\n''(+ or sum)''\n''(- or subtraction)''\n''(* or zarb)''\n''(** or power)''\n''(/ or split)''\n''(// or split int)''\n''(%  mod)') 
+            table_c=[["you are select basic you can use opration"],
+            ['(+ or sum)'],
+            ['(- or subtraction)'],
+            ['(* or zarb)'],
+            ['(** or power)'],
+            ['(/ or split)'],
+            ['(// or split int)'],
+            ['(%  mod)']]
+            print(tabulate(table_c,headers='firstrow',tablefmt='fancy_grid'))
             number1=float(input("Enter the number on the left side of the operation "))
             Operation=input("enter your a opration: ")
             number2=float(input("Enter the number on the right side of the operation "))
@@ -100,15 +117,49 @@ for i in range(rank):
             continue
             
      elif basic_or_advanced==2:
-            print('='*10,'selection','='*10,'\n''1)abs''\n''2)Trighanbes''\n''3)sqrt''\n''4)even or odd''\n''5)log10''\n''6)kmm''\n''7)bmm''\n''8)factorial''\n''9)Convert radians to degrees''\n''10)convert degrees to radians''\n''11)ceil''\n''12)floor''\n''13)exp''\n''14)log(x,b)''\n''15)int(x)''\n''16)hypot(x,y)''\n''17)power(x,y)''\n''18)convert number''\n''19)convert temprature''\n''20)BMI''\n''21)area''\n''22)prime')
-            select=int(float(input("select: ")))
+            table_d=[['selection'],
+            ['1)abs'],
+            ['2)Trighanbes'],
+            ['3)sqrt'],
+            ['4)even or odd'],
+            ['5)log10'],
+            ['6)kmm'],
+            ['7)bmm'],
+            ['8)factorial'],
+            ['9)Convert radians to degrees'],
+            ['10)convert degrees to radians'],
+            ['11)ceil'],
+            ['12)floor'],
+            ['13)exp'],
+            ['14)log(x,b)'],
+            ['15)int(x)'],
+            ['16)hypot(x,y)'],
+            ['17)power(x,y)'],
+            ['18)convert number'],
+            ['19)convert temprature'],
+            ['20)BMI'],
+            ['21)area'],
+            ['22)prime']]
+            print(tabulate(table_d,headers='firstrow',tablefmt='fancy_grid'))
+            select=int(input("select : "))
+            
             if select==1:
                 number=float(input("enter your number: "))
                 answer=abs(number)
                 print(answer)
                 print("you are use calculater",i,'order. ')
             elif select==2:
-                print('='*10,'selection','='*10,'\n'"please select: "'\n''1)sin''\n''2)cos''\n''3)tan''\n''4)arsin''\n''5)arcos''\n''6)artan''\n''7)arsinh''\n''8)arcosh')
+                table_e=[['selection'],
+                ['1)sin'],
+                ['2)cos'],
+                ['3)tan'],
+                ['4)arsin'],
+                ['5)arcos'],
+                ['6)artan'],
+                ['7)arsinh'],
+                ['8)arcosh)']]
+                print(tabulate(table_e,headers='firstrow',tablefmt='fancy_grid'))
+                
                 select2=int(float(input("select= ")))
                 number2=float(input("enter your number: "))
                 if select2==1:
@@ -231,7 +282,21 @@ for i in range(rank):
                  print(answer)
                  print("you are use calculater",i,'order. ')
             elif select==18:
-                print('='*10,'convert','='*10,'\n''selec: ''\n''1)bin--->dec''\n''2)bin--->oct''\n''3)bin--->hex''\n''4)oct--->dec''\n''5)oct--->bin''\n''6)oct--->hex''\n''7)hex--->dec''\n''8)hex--->bin''\n''9)hex--->oct''\n''10)dec--->bin''\n''11)dec--->oct''\n''12)dec--->hex')
+                table_h=[['convert'],
+                ['1)bin--->dec'],
+                ['2)bin--->oct'],
+                ['3)bin--->hex'],
+                ['4)oct--->dec'],
+                ['5)oct--->bin'],
+                ['6)oct--->hex'],
+                ['7)hex--->dec'],
+                ['8)hex--->bin'],
+                ['9)hex--->oct'],
+                ['10)dec--->bin'],
+                ['11)dec--->oct'],
+                ['12)dec--->hex']]
+                print(tabulate(table_h,headers='firstrow',tablefmt='fancy_grid'))
+                
                 select=int(input('select:'))
                 if select==1:
                     number=0
@@ -374,9 +439,16 @@ for i in range(rank):
                     print("you are use calculater",i,'order. ')
             elif select==19:
                     temperture=int(float(input("enter temprrture: ")))
-                    space="                "
-                    space1="       "
-                    print("Please select one of the conversions below for the entered temperature""\n"" __________________""\n""|",space,"|""\n""|""1)c---->f",space1,"|""\n""|",space,"|""\n""|""2)f---->c",space1,"|""\n""|",space,"|""\n""|""3)k---->f",space1,"|""\n""|",space,"|""\n""|""4)f---->k",space1,"|""\n""|",space,"|""\n""|""5)c---->k",space1,"|""\n""|",space,"|""\n""|""6)k---->c",space1,"|","\n""|""__________________""|")
+                
+                    table_j=[["Please select one of the conversions below for the entered temperature"],
+                    ["1)c---->f"],
+                    ["2)f---->c"],
+                    ["3)k---->f"],
+                    ["4)f---->k"],
+                    ["5)c---->k"],
+                    ["6)k---->c"]]
+                    print(tabulate(table_j,headers='firstrow',tablefmt='fancy_grid'))
+                
                     choose=int(float(input("Which one do you choose? ")))
                     if choose==1:
                         farenheit=temperture(9/5)+32
@@ -432,7 +504,15 @@ for i in range(rank):
                     print("This interval was unpredictable.")
                     print("you are use calculater",i,'order. ')
             elif select==21:
-                print("="*10,'area selection','='*10,'\n''1)Triangle''\n''2)circle''\n''3)Square''\n''4)Rectangle''\n''5)Cylinder''\n''6)sphere')
+                table_l=[['area selection'],
+                ['1)Triangle'],
+                ['2)circle'],
+                ['3)Square'],
+                ['4)Rectangle'],
+                ['5)Cylinder'],
+                ['6)sphere']]
+                print(tabulate(table_l,headers='firstrow',tablefmt='fancy_grid'))
+            
                 select=int(input('select: '))
                 if select==1:
                     base=float(input("enter base: "))
