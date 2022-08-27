@@ -40,15 +40,15 @@ for i in range(rank):
             number2=float(input("Enter the number on the right side of the operation "))
             if Operation=="+" or Operation=="sum":
                 answer=(number1+number2)
-                print('\n',name,'your anwer is: ',answer)
+                print('\n''\n',number1,'+',number2,'=',answer)
                 print('\n',name,"you are use calculater",i,'order. ')
             elif Operation=="-"or Operation=="subtraction":
                 answer=(number1-number2)
-                print('\n',name,'your anwer is: ',answer)
+                print('\n''\n',number1,'-',number2,'=',answer)
                 print('\n',name,"you are use calculater",i,'order. ')
             elif Operation=="*" or Operation== "zarb":
                 answer=number1*number2
-                print('\n',name,'your anwer is: ',answer)
+                print('\n','\n',number1,'*',number2,'=',answer)
                 print('\n',name,"you are use calculater",i,'order. ')
             elif Operation=="/" or Operation== "split":
                 if number2==0:
@@ -56,7 +56,7 @@ for i in range(rank):
                     print('\n',name,"you are use calculater",i,'order. ')
                 else:
                     answer=number1/number2
-                    print('\n',name,'your anwer is: ',answer)
+                    print('\n''\n',number1,'/',number2,'=',answer)
                     print('\n',name,"you are use calculater",i,'order. ')
             elif Operation=="//" or Operation== "split int":
                 if number2==0:
@@ -64,15 +64,15 @@ for i in range(rank):
                     print('\n',name,"you are use calculater",i,'order. ')
                 else :
                     answer=number1//number2
-                    print('\n',name,'your anwer is: ',answer)
+                    print('\n''\n',number1,'//',number2,'=',answer)
                     print('\n',name,"you are use calculater",i,'order. ')
             elif Operation=="**" or Operation==  " power":
                 answer=number1**number2
-                print('\n',name,'your anwer is: ',answer)
+                print('\n''\n',number1,'**',number2,'=',answer)
                 print('\n',name,"you are use calculater",i,'order. ')
             elif Operation=="%" or Operation== "mod":
                 answer=number1%number2
-                print('\n',name,'your anwer is: ',answer)
+                print('\n''\n',number1,'%',number2,'=',answer)
                 print('\n',name,"you are use calculater",i,'order. ')
         elif select_basic==2:
             while True:
@@ -142,7 +142,9 @@ for i in range(rank):
             ['20)BMI'],
             ['21)area'],
             ['22)prime']]
+
             print(tabulate(table_d,headers='firstrow',tablefmt='fancy_grid'))
+
             select=int(input("select : "))
             
             if select==1:
@@ -150,6 +152,7 @@ for i in range(rank):
                 answer=abs(number)
                 print('\n',name,'your anwer is: ',answer)
                 print('\n',name,"you are use calculater",i,'order. ')
+                
             elif select==2:
                 table_e=[['selection'],
                 ['1)sin'],
@@ -159,7 +162,8 @@ for i in range(rank):
                 ['5)arcos'],
                 ['6)artan'],
                 ['7)arsinh'],
-                ['8)arcosh)']]
+                ['8)arcosh)']
+                ['9)COT']]
                 print(tabulate(table_e,headers='firstrow',tablefmt='fancy_grid'))
                 
                 select2=int(float(input("select= ")))
@@ -196,6 +200,14 @@ for i in range(rank):
                     answer=math.acosh(number2)
                     print('\n',name,'your anwer is: ',answer)
                     print('\n',name,"you are use calculater",i,'order. ')
+                elif select2==9:
+                    answer=math.cos(number2)/math.sin(number2)
+                    print('\n',name,'your anwer is: ',answer)
+                    print('\n',name,"you are use calculater",i,'order. ')
+                else:
+                    print(name,',','\n','wrong')
+                    break
+
                 
             elif select==3:
                 number3=float(input("enter your number: "))
@@ -628,7 +640,7 @@ for i in range(rank):
         print ("wrong we dont have this number")
         print('\n',name,"you are use calculater",i,'order. ')
         continue
-print('\n''dear',name,',i hope this calculator can help you...:)')
+print('\n''dear',name,',i hope this calculator can help you..:D')
 
 
 
