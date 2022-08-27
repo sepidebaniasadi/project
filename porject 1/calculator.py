@@ -601,20 +601,22 @@ for i in range(rank):
                     print('wrong!')
                     print("you are use calculater",i,'order. ')       
             elif select==22:
-                c=True
+                
                 num=(int(input("enter number : ")))
                 for i in range(2,num):
                         if num>1:
                             if num%i==0:
-                                c=False
+                                print(num,"is not prime")
+                                break
                             else:
-                              c=True
+                                print(num,"is prime")
+                                break
                         else:
-                            c=False
-                if c==True:
-                    print(num,"is prime")
-                elif c==False:
-                    print(num,"is not prime")
+                            print(num,"is not prime")
+                            break
+                           
+                
+                   
 
                 
             else:
