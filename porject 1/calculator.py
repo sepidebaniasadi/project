@@ -1,9 +1,12 @@
 import math
 from tabulate import tabulate
-
+#start calculator
 
 table_p=['welcome']
 print(tabulate(table_p,tablefmt='fancy_grid'))
+
+#name for call user
+
 name =input(" hello my dear please enter your name: ")
 print('\n''hey',name)
 
@@ -17,15 +20,18 @@ for i in range(rank):
      table_a=[["1)basic"],
              ['2)advanced']]
      print(tabulate(table_a,headers='firstrow',tablefmt='fancy_grid'))
+#select mod
 
      basic_or_advanced=int(input("answer: "))
-     
+     #start selection basic
+
      if basic_or_advanced==1:
         table_b=[["1)basic"],
                  ["2)basic sequence(No priority)"]]
         print(tabulate(table_b,headers='firstrow',tablefmt='fancy_grid'))
         select_basic=int(input("select:"))
         if select_basic==1:
+            #basic
             table_c=[["you are select basic you can use opration"],
             ['(+ or sum)'],
             ['(- or subtraction)'],
@@ -75,6 +81,8 @@ for i in range(rank):
                 print('\n''\n',number1,'%',number2,'=',answer)
                 print('\n',name,"you are use calculater",i,'order. ')
         elif select_basic==2:
+            #basic sequence
+
             while True:
                 number = float(input("Enter a number: "))
                 break
@@ -119,6 +127,8 @@ for i in range(rank):
             continue
             
      elif basic_or_advanced==2:
+        #start advance+selection
+        
             table_d=[['selection'],
             ['1)abs'],
             ['2)Trighanbes'],
@@ -148,12 +158,15 @@ for i in range(rank):
             select=int(input("select : "))
             
             if select==1:
+                #abs
+
                 number=float(input("enter your number: "))
                 answer=abs(number)
                 print('\n',name,'your anwer is: ',answer)
                 print('\n',name,"you are use calculater",i,'order. ')
                 
             elif select==2:
+                #Trighanbes
                 table_e=[['selection'],
                 ['1)sin'],
                 ['2)cos'],
@@ -169,38 +182,56 @@ for i in range(rank):
                 select2=int(float(input("select= ")))
                 number2=float(input("enter your number: "))
                 if select2==1:
+                    #sin
+
                     answer=math.sin(number2)
                     print('\n',name,'your anwer is: ',answer)
                     print('\n',name,"you are use calculater",i,'order. ')
                 elif select2==2:
+                    #cos
+
                     answer=math.cos(number2)
                     print('\n',name,'your anwer is: ',answer)
                     print('\n',name,"you are use calculater",i,'order. ')
                 elif select2==3:
+                    #tan
+
                     answer=math.tan(number2)
                     print('\n',name,'your anwer is: ',answer)
                     print('\n',name,"you are use calculater",i,'order. ')
                 elif select2==4:
+                    #asin
+
                     answer=math.asin(number2)
                     print('\n',name,'your anwer is: ',answer)
                     print('\n',name,"you are use calculater",i,'order. ')
                 elif select2==5:
+                    #acos
+
                     answer=math.acos(number2)
                     print('\n',name,'your anwer is: ',answer)
                     print('\n',name,"you are use calculater",i,'order. ')
                 elif select2==6:
+                    #atan
+
                     answer=math.atan(number2)
                     print('\n',name,'your anwer is: ',answer)
                     print('\n',name,"you are use calculater",i,'order. ')
                 elif select2==7:
+                    #asinh
+
                     answer=math.asinh(number2)
                     print('\n',name,'your anwer is: ',answer)
                     print('\n',name,"you are use calculater",i,'order. ')
                 elif select2==8:
+                    #acosh
+
                     answer=math.acosh(number2)
                     print('\n',name,'your anwer is: ',answer)
                     print('\n',name,"you are use calculater",i,'order. ')
                 elif select2==9:
+                    #cot
+
                     answer=math.cos(number2)/math.sin(number2)
                     print('\n',name,'your anwer is: ',answer)
                     print('\n',name,"you are use calculater",i,'order. ')
@@ -210,11 +241,15 @@ for i in range(rank):
 
                 
             elif select==3:
+                #sqrt
+
                 number3=float(input("enter your number: "))
                 answer=math.sqrt(number3)
                 print('\n',name,'your anwer is: ',answer)
                 print('\n',name,"you are use calculater",i,'order. ')
             elif select==4:
+                #odd even
+
                 number4=float(input("enter number"))
                 if(number4%2==0):
                     print("your number is even")
@@ -223,22 +258,30 @@ for i in range(rank):
                     print("your number is odd")
                     print('\n',name,"you are use calculater",i,'order. ')
             elif select==5:
+                #log10
+
                 number5=float(input("enter number"))
                 answer=math.log10(number5)
                 print('\n',name,'your anwer is: ',answer)
                 print('\n',name,"you are use calculater",i,'order. ')
             elif select==6:
+                #lcm
+
                 number6=int(float(input('enter number: ')))
                 number7=int(float(input('enter number: ')))
                 answer= math.lcm(number6, number7)
                 print('\n',name,'your anwer is: ',answer)
                 print('\n',name,"you are use calculater",i,'order. ')
             elif select==7:
+                #gcd
+
                 number8=int(float(input('enter number: ')))
                 number9=int(float(input('enter number: ')))
                 print("bmm: " , math.gcd(number8, number9))
                 print('\n',name,"you are use calculater",i,'order. ')
             elif select==8:
+                #fact
+
                 number10 = float(input("please Enter  number: "))
                 if number10 < 0:
                     print("Sorry, factorial does not exist for negative numbers")
@@ -248,54 +291,74 @@ for i in range(rank):
                     print("The factorial of {} is: {}".format(number10, result))
                     print('\n',name,"you are use calculater",i,'order. ')
             elif select==9:
+                #degrees
+                
                  number11 = float(input("please Enter  number: "))
                  answer=math.degrees(number11)
                  print('\n',name,'your anwer is: ',answer)
                  print('\n',name,"you are use calculater",i,'order. ')
             elif select==10:
+                #radians
+
                  number12 = float(input("please Enter  number: "))
                  answer=math.radians(number12)
                  print('\n',name,'your anwer is: ',answer)
                  print('\n',name,"you are use calculater",i,'order. ')
             elif select==11:
+                #ceil
+
                  number13 = float(input("please Enter  number: "))
                  answer=math.ceil(number13)
                  print('\n',name,'your anwer is: ',answer)
                  print('\n',name,"you are use calculater",i,'order. ')
             elif select==12:
+                #floor
+
                  number14 = float(input("please Enter  number: "))
                  answer=math.floor(number14)
                  print('\n',name,'your anwer is: ',answer)
                  print('\n',name,"you are use calculater",i,'order. ')
             elif select==13:
+                #exp
+
                  number15=float(input("please Enter  number: "))
                  answer=math.exp(number15)
                  print('\n',name,'your anwer is: ',answer)
                  print('\n',name,"you are use calculater",i,'order. ')
             elif select==14:
+                #log(x,b)
+
                  x=float(input("please Enter  x: "))
                  b=float(input("please Enter  b: "))
                  answer=math.log(x,b)
                  print('\n',name,'your anwer is: ',answer)
                  print('\n',name,"you are use calculater",i,'order. ')
             elif select==15:
+                #trunc
+
                  number17=float(input("please Enter  your numbers: "))
                  answer=math.trunc(number17)
                  print('\n',name,'your anwer is: ',answer)
                  print('\n',name,"you are use calculater",i,'order. ')
             elif select==16:
+                #hypto
+
                  number18=float(input("please Enter  number: "))
                  number19=float(input("please Enter  number: "))
                  answer=math.hypot(number18,number19)
                  print('\n',name,'your anwer is: ',answer)
                  print('\n',name,"you are use calculater",i,'order. ')
             elif select==17:
+                #power(x,y)
+
                  x=float(input("please Enter  x: "))
                  y=float(input("please Enter  y : "))
                  answer=math.pow(x,y)
                  print('\n',name,'your anwer is: ',answer)
                  print('\n',name,"you are use calculater",i,'order. ')
             elif select==18:
+                #convert num
+
                 table_h=[['convert'],
                 ['1)bin--->dec'],
                 ['2)bin--->oct'],
@@ -310,7 +373,8 @@ for i in range(rank):
                 ['11)dec--->oct'],
                 ['12)dec--->hex']]
                 print(tabulate(table_h,headers='firstrow',tablefmt='fancy_grid'))
-                
+                #start conver bin--->
+
                 select=int(input('select:'))
                 if select==1:
                     number=0
@@ -355,6 +419,9 @@ for i in range(rank):
                         bace = bace*2
                     print(hex(sums))
                     print('\n',name,"you are use calculater",i,'order. ')
+                    
+                #start convert oct--->
+
                 elif select==4:
                     number=0
                     bace=1
@@ -411,6 +478,8 @@ for i in range(rank):
                         bace = bace*16
                     print(sums)
                     print('\n',name,"you are use calculater",i,'order. ')
+
+                #start convert hex--->
                 elif select==8:
                     number=0
                     bace=1
@@ -439,6 +508,9 @@ for i in range(rank):
                         bace = bace*16
                     print(oct(sums))
                     print('\n',name,"you are use calculater",i,'order. ')
+                
+                # star convert dec--->
+
                 elif select==10:
                     number = int(input("Enter number: "))
                     print(bin(number))
@@ -452,6 +524,7 @@ for i in range(rank):
                     print(hex(number))
                     print('\n',name,"you are use calculater",i,'order. ')
             elif select==19:
+                #start temperture convert
                     temperture=int(float(input("enter temprrture: ")))
                 
                     table_j=[["Please select one of the conversions below for the entered temperature"],
@@ -493,6 +566,7 @@ for i in range(rank):
                         print('\n',name,"you are use calculater",i,'order. ')
                         break
             elif select==20:    
+                #start bmi calculator
                 length=(float(input("enter your length with metr: ")))
                 wieght=(float(input('enter your wieght with kg: ')))
                 BMI=(wieght/(length**2))
@@ -518,6 +592,8 @@ for i in range(rank):
                     print("This interval was unpredictable.")
                     print('\n',name,"you are use calculater",i,'order. ')
             elif select==21:
+                #start area calculator
+
                 table_l=[['area selection'],
                 ['1)Triangle'],
                 ['2)circle'],
@@ -618,6 +694,7 @@ for i in range(rank):
                     print('wrong!')
                     print('\n',name,"you are use calculater",i,'order. ')       
             elif select==22:
+                #start prim
                 
                 num=(int(input("enter number : ")))
                 for i in range(2,num):
