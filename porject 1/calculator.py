@@ -131,7 +131,7 @@ for i in range(rank):
         
             table_d=[['selection'],
             ['1)abs'],
-            ['2)Trighanbes'],
+            ['2)Trigonometry'],
             ['3)sqrt'],
             ['4)even or odd'],
             ['5)log10'],
